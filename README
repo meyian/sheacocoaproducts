@@ -1,0 +1,86 @@
+README
+
+---- Todo ----
+
+others
+
+* put this on Github
+
+
+./convert.sh
+
+* How do i render this down into an executable?
+* Do any existing packages begin w/ convert? Or am I free to label?
+* I'm using entr, how can i bundle it with my software? Maybe I just tell people that this comes with entr
+* Test this on Linux
+* Write a README and LICENSE
+* Add this to the blog post about HAML
+
+Making it down each bullet point is like swimming against a current that's trying to drag you to YouTube
+
+
+---- Notes ----
+
+-- To start watching --
+
+./convert.sh
+
+
+
+---- Scratchpad ----
+
+
+-- Fri 20 Mar --
+
+(Coronavirus is fucking shitty. Being indoors the whole day.)
+
+Todo
+* Style header & section 1
+* Look at Gatbsy businesses
+* Call Omar
+
+
+-- Thu 19 Mar --
+
+Moved to HAML
+
+Todo:
+
++ Watch the folder (10:09)
++ Coffee
+* Style the header?
+= Start on the next section?
+
+
+-- Wed 18 Mar --
+
+HTML is insufferable. I'm moving to HAML.
+
+
+Todo
+
+* Write a script that monitors any file in the current folder
+* See if you can package that as a gem? 30 minutes to see what is what.
+-
+* Start writing the site in HAML
+
+
+- Helpful links -
+
+* https://superuser.com/questions/445907/monitor-a-folder-osx-for-file-changes-then-run-a-bash-script
+
+fswatch . './convert'
+
+* https://superuser.com/questions/513496/how-can-i-run-a-command-from-the-terminal-without-blocking-it
+
+
+
+
+
+-- Tue 17 Mar --
+
+(7:48 AM)
+
+- Todo -
+* Convert this to HAML. HTML is unbearable
+
