@@ -7,25 +7,111 @@
 		%link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
 
 		%style{media: "screen"}
-			:cdata
-				body{
-					background-color: beige;
+			:plain
+
+				.header{
+					width: 100%;
+				}
+
+				.header__logo-wrapper{
+					width: 100%;
+					text-align: center;
+				}
+
+				.main__jumbotron{
+					width: 100vw;
+					height: 62vw;
+					position: relative;
+					overflow: hidden;
+				}
+
+				.jumbotron__image{
+					width: 100%;
+					height: auto;
+					position: absolute;
+					z-index: -10;
+				}
+
+				.jumbotron__panel{
+					width: 200px; height: 200px; border: 2px solid black;
+				}
+
+				.jumbotron__panel-wrapper{
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.header__logo{
+					width: 15rem;
+					max-width: 300px;
+					height: auto;
+				}
+
+				.header__navigation{
+					width: 100%;
 				}
 
 		%body
-			%header.header-menu
-			%h1 shea and cocoa
-			%nav
-				%ul
-					%li Home
-					%li Products
-					%li About Us
-					%li Contact Us
-			%section.01-section-jumbotron.panel.row
-				%h2 brand slogan
+			%header.header
+				.header__logo-wrapper
+					%img.header__logo{alt: "shea and cocoa logo", src: "./images/logo.png"} 
+				%nav.header__navigation
+					%ul
+						%li Home
+						%li Products
+						%li About Us
+						%li Contact Us
+			%section.main
+				.main__jumbotron
+					%img.jumbotron__image{alt: "Large image of our product", src:"./images/product.jumbotron.jpg"}
+					.jumbotron__panel-wrapper
+						.jumbotron__panel
+				.main__section-container.container
+					%section.01-section-jumbotron.panel.row
+						%h2 brand slogan
+			%footer
+				.footer__content-container.container
+					.row.col-sm-6
+					.row.col-sm-6
 
 
 		
+/
 	
+	Todo:
+
+	load an image
+	style the navigation
+	put the nav in a container
+	Try partials
+	 
+
+	Asides
+
+	__Fri 20 Mar__
+
+	_9:24 AM_
+
+	Fun for me would be
+
+	* constructing this whole thing out of partials.
+	* learning about SCSS, and seeing if it can help me structure my css
+
+
+	_9:21 AM_
+
+	#opensource
+
+	I'm wondering if a task runner could automatically extract all the js and css and make them two files?
+
+	Would this be helpful in Rails?
+
+	HAML improvements
+
+	doesn't respect comments enough.
+	"nesting within plain text is illegal"
 
 

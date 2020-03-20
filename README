@@ -4,7 +4,10 @@ README
 
 others
 
-* put this on Github
++ put this on Github
+* Style header & section 1
++ Look at Gatbsy businesses, Gatsby itself
+* Use Cloudinary to store all images
 
 
 ./convert.sh
@@ -36,7 +39,7 @@ Making it down each bullet point is like swimming against a current that's tryin
 
 Todo
 * Style header & section 1
-* Look at Gatbsy businesses
+* Look at Gatbsy businesses, Gatsby itself
 * Call Omar
 
 
