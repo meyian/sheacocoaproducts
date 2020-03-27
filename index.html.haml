@@ -3,6 +3,7 @@
 %html
 	%head
 		%meta(charset="utf-8")
+		%meta(name="viewport" content="width=device-width, user-scalable=no")
 
 		%link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
 
@@ -20,7 +21,8 @@
 
 				.main__jumbotron{
 					width: 100vw;
-					height: 62vw;
+					height: 52vw;
+					max-height: 540px;
 					position: relative;
 					overflow: hidden;
 				}
@@ -33,7 +35,8 @@
 				}
 
 				.jumbotron__panel{
-					width: 200px; height: 200px; border: 2px solid black;
+					width: 200px; height: 200px;
+					/* border: 2px solid black; */
 				}
 
 				.jumbotron__panel-wrapper{
@@ -54,28 +57,123 @@
 					width: 100%;
 				}
 
+				ul.navigation_list{
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+
+				.navigation_list li{
+					display: inline-block;
+					text-decoration: none;
+				}
+
+				.align-center{
+					margin: 0 auto;
+				}
+
+				@media only screen and (max-width: 400px){
+
+					html{
+						font-size: 13px;
+					}
+
+					.main__jumbotron{
+						height: 62vw;
+						max-height: none;
+					}
+
+					.jumbotron__text{
+						font-size: 1.5rem;
+					}
+
+					.jumbotron__panel{
+						height: 6em;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						align-items: center;
+					}
+
+					.jumbotron__image{
+						height: 100%;
+						width: auto;
+						position: absolute;
+						z-index: -10;
+						left: -2rem;
+					}
+
+					.main__jumbotron{
+						height: 100vw;
+					}
+
+					.favorites__row{
+						padding-top: 4rem;
+						/* display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						align-items: center; */
+					}
+
+					.favorites__row h2{
+						margin: 0 auto;
+					}
+
+					.image-wrapper{
+						width: 100%;
+						height: 86vw;
+						overflow: hidden;
+					}
+
+					.favorites__row img{
+						width: 100%;
+						height: auto;
+					}
+
+					.centered_row{
+						text-align: center;
+					}
+
+				}
+
 		%body
 			%header.header
 				.header__logo-wrapper
 					%img.header__logo{alt: "shea and cocoa logo", src: "./images/logo.png"} 
 				%nav.header__navigation
-					%ul
-						%li Home
-						%li Products
-						%li About Us
-						%li Contact Us
+					%ul.navigation_list.container
+						%li 
+							%a{href: "#"} Home
+						%li 
+							%a{href: "#"} Products
+						%li 
+							%a{href: "#"} About Us
+						%li 
+							%a{href: "#"} Contact Us
 			%section.main
-				.main__jumbotron
+				.main__jumbotron.image-wrapper
 					%img.jumbotron__image{alt: "Large image of our product", src:"./images/product.jumbotron.jpg"}
 					.jumbotron__panel-wrapper
 						.jumbotron__panel
-				.main__section-container.container
-					%section.01-section-jumbotron.panel.row
-						%h2 brand slogan
+							%h1.jumbotron__text [best soaps]
+							%button.jumbotron__cta.btn.btn-primary [shop now]
+				%main__favorites
+					.container
+						.favorites__row
+							.centered_row
+								%h2.align-center Our Favorites		
+							%h3 [Probiotic 
+							%h3 Cleansing Bars]
+							%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
+							%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
+							.image-wrapper
+								%img(src="images/IMG-20190127-WA0012.jpg")
 			%footer
 				.footer__content-container.container
 					.row.col-sm-6
 					.row.col-sm-6
+			:plain
+				<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 
 		
@@ -83,13 +181,25 @@
 	
 	Todo:
 
-	load an image
-	style the navigation
-	put the nav in a container
+
+	Jumbotron
+	Soap sections
+
 	Try partials
 	 
 
 	Asides
+
+	__Wed 25 Mar__
+
+	_7:25 AM_
+
+	What needs to happen:
+
+	Figure something out w/ the jumbotron
+	Do the soap
+	Find wooden background, green plant illustrations
+
 
 	__Fri 20 Mar__
 
@@ -104,6 +214,8 @@
 	_9:21 AM_
 
 	#opensource
+
+	Sort a CSS file?
 
 	I'm wondering if a task runner could automatically extract all the js and css and make them two files?
 

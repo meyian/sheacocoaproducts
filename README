@@ -8,6 +8,12 @@ others
 * Style header & section 1
 + Look at Gatbsy businesses, Gatsby itself
 * Use Cloudinary to store all images
+-
+* Jumbotron
+* Soap sections
+* Footer
+* Desktop
+* Final pass
 
 
 ./convert.sh
@@ -31,6 +37,40 @@ Making it down each bullet point is like swimming against a current that's tryin
 
 
 ---- Scratchpad ----
+
+-- Thu 26 Mar --
+
+- 10:24 AM -
+
+Done
+* python3 -m http.server
+* Research on partials
+* Began the favorites segment
+
+- 7:14 AM -
+
+Todo
+
+* Jumbotron
+* Soap sections
+* Footer
+* Desktop
+* Final pass
+
+
+
+
+-- Mon 23 Mar --
+
+- 11:34 AM -
+
+Todo
+
+* Learn how to style with Gatbsy & CSS modules
+* Style
+* Build out the page, carry across
+* Be finished by Friday
+
 
 
 -- Fri 20 Mar --
