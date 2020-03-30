@@ -27,11 +27,12 @@
 	height: auto;
 	position: absolute;
 	z-index: -10;
+	filter: brightness(120%) opacity(70%);
 }
 
 .jumbotron__panel{
 	width: 200px; height: 200px;
-	/* border: 2px solid black; */
+	text-align: center;
 }
 
 .jumbotron__panel-wrapper{
@@ -80,6 +81,7 @@ ul.navigation_list{
 
 	.jumbotron__text{
 		font-size: 1.5rem;
+		text-transform: uppercase;
 	}
 
 	.jumbotron__panel{
@@ -104,10 +106,6 @@ ul.navigation_list{
 
 	.favorites__row{
 		padding-top: 4rem;
-		/* display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center; */
 	}
 
 	.favorites__row h2{
@@ -118,17 +116,53 @@ ul.navigation_list{
 		width: 100%;
 		height: 86vw;
 		overflow: hidden;
-	}
-
-	.favorites__row img{
-		width: 100%;
-		height: auto;
+		position: relative;
 	}
 
 	.centered_row{
 		text-align: center;
 	}
 
+	.product-images img{
+		width: 100%;
+		height: auto;
+	}
+
+	.product__img-wrappers{
+		position: absolute;
+		overflow: hidden;
+	}
+
+	.product__bkgd-wrapper__1{
+		left: 0; bottom: 0;
+		width: 90%;
+		height: 68vw;
+	}
+
+	.product__img-wrapper__1{
+		right: 0; top: 0;
+	}
+
+	.product__bkgd-wrapper__2{
+		left: 0; bottom: 0;
+		width: 80%;
+		height: 100%;
+	}
+
+	.product__img-wrapper__2{
+		right: 0; top: 1rem;
+	}
+
+	.product__wrapper{
+		/* border: 3px solid gray; */
+		width: 90%;
+		height: 70vw;
+	}
+
+	.product__img__2{
+		height: 100%!important;
+		width: auto!important;
+	}
 }
 </style>
 <body>
@@ -158,23 +192,43 @@ ul.navigation_list{
 <img alt='Large image of our product' class='jumbotron__image' src='./images/product.jumbotron.jpg'>
 <div class='jumbotron__panel-wrapper'>
 <div class='jumbotron__panel'>
-<h1 class='jumbotron__text'>[best soaps]</h1>
+<h1 class='jumbotron__text'>[Just like nature intended]</h1>
 <button class='jumbotron__cta btn btn-primary'>[shop now]</button>
 </div>
 </div>
 </div>
 <main__favorites>
-<div class='container'>
-<div class='favorites__row'>
 <div class='centered_row'>
-<h2 class='align-center'>Our Favorites</h2>
+<h2 class='mt-5'>Our Favorites</h2>
 </div>
+<div class='container mt-4'>
 <h3>[Probiotic</h3>
-<h3>Cleansing Bars]</h3>
+<h3 class='mb-2'>Cleansing Bars]</h3>
 <p>[I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]</p>
 <button class='btn btn-primary mb-5 mt-2'>Shop Soaps</button>
-<div class='image-wrapper'>
+<div class='image-wrapper product-images'>
+<div class='product__bkgd-wrapper__1 product__img-wrappers'>
+<img src='images/85274765-green-leaf-seamless-pattern-tropical-polygons-plant-in-low-poly-style-for-fresh-background-wallpaper.jpg'>
+</div>
+<div class='product__img-wrapper__1 product__img-wrappers product__wrapper'>
 <img src='images/IMG-20190127-WA0012.jpg'>
+</div>
+</div>
+</div>
+<div class='separator mt-4 mb-4'>
+&nbsp;
+</div>
+<div class='container mt-4'>
+<h3>[Nature's Essence</h3>
+<h3 class='mb-2'>Lavendar Bars]</h3>
+<p>[I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]</p>
+<button class='btn btn-primary mb-5 mt-2'>Shop Soaps</button>
+<div class='image-wrapper product-images'>
+<div class='product__bkgd-wrapper__2 product__img-wrappers'>
+<img class='product__bkgd__2' src='images/wood_bkgd.png'>
+</div>
+<div class='product__img-wrapper__2 product__img-wrappers product__wrapper'>
+<img class='product__img__2' src='images/IMG-20190601-WA0049.jpg'>
 </div>
 </div>
 </div>
@@ -192,9 +246,11 @@ ul.navigation_list{
 </html>
 <!--
 Todo:
+Move product around in second favorite
 Jumbotron
-Soap sections
-Try partials
+Style buttons
+Footer
+Accessibility
 Asides
 __Wed 25 Mar__
 _7:25 AM_
@@ -202,6 +258,7 @@ What needs to happen:
 Figure something out w/ the jumbotron
 Do the soap
 Find wooden background, green plant illustrations
+h1 color - #576855
 __Fri 20 Mar__
 _9:24 AM_
 Fun for me would be

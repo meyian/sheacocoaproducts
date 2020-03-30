@@ -38,11 +38,29 @@ Making it down each bullet point is like swimming against a current that's tryin
 
 ---- Scratchpad ----
 
+-- Mon 30 Mar --
+
+* The buttons
+* The footer
+* The right classnames for responsive
+* The fonts
+
+
+
+
+-- Fri 27 Mar --
+
+* Migrate to SCSS
+
+
+
+
 -- Thu 26 Mar --
 
 - 10:24 AM -
 
 Done
+
 * python3 -m http.server
 * Research on partials
 * Began the favorites segment
@@ -73,6 +91,7 @@ Todo
 
 
 
+
 -- Fri 20 Mar --
 
 (Coronavirus is fucking shitty. Being indoors the whole day.)
@@ -81,6 +100,8 @@ Todo
 * Style header & section 1
 * Look at Gatbsy businesses, Gatsby itself
 * Call Omar
+
+
 
 
 -- Thu 19 Mar --
@@ -93,6 +114,8 @@ Todo:
 + Coffee
 * Style the header?
 = Start on the next section?
+
+
 
 
 -- Wed 18 Mar --
@@ -115,7 +138,6 @@ Todo
 fswatch . './convert'
 
 * https://superuser.com/questions/513496/how-can-i-run-a-command-from-the-terminal-without-blocking-it
-
 
 
 

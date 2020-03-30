@@ -32,11 +32,12 @@
 					height: auto;
 					position: absolute;
 					z-index: -10;
+					filter: brightness(120%) opacity(70%);
 				}
 
 				.jumbotron__panel{
 					width: 200px; height: 200px;
-					/* border: 2px solid black; */
+					text-align: center;
 				}
 
 				.jumbotron__panel-wrapper{
@@ -85,6 +86,7 @@
 
 					.jumbotron__text{
 						font-size: 1.5rem;
+						text-transform: uppercase;
 					}
 
 					.jumbotron__panel{
@@ -109,10 +111,6 @@
 
 					.favorites__row{
 						padding-top: 4rem;
-						/* display: flex;
-						flex-direction: column;
-						justify-content: space-between;
-						align-items: center; */
 					}
 
 					.favorites__row h2{
@@ -123,17 +121,53 @@
 						width: 100%;
 						height: 86vw;
 						overflow: hidden;
-					}
-
-					.favorites__row img{
-						width: 100%;
-						height: auto;
+						position: relative;
 					}
 
 					.centered_row{
 						text-align: center;
 					}
 
+					.product-images img{
+						width: 100%;
+						height: auto;
+					}
+
+					.product__img-wrappers{
+						position: absolute;
+						overflow: hidden;
+					}
+
+					.product__bkgd-wrapper__1{
+						left: 0; bottom: 0;
+						width: 90%;
+						height: 68vw;
+					}
+
+					.product__img-wrapper__1{
+						right: 0; top: 0;
+					}
+
+					.product__bkgd-wrapper__2{
+						left: 0; bottom: 0;
+						width: 80%;
+						height: 100%;
+					}
+
+					.product__img-wrapper__2{
+						right: 0; top: 1rem;
+					}
+
+					.product__wrapper{
+						/* border: 3px solid gray; */
+						width: 90%;
+						height: 70vw;
+					}
+
+					.product__img__2{
+						height: 100%!important;
+						width: auto!important;
+					}
 				}
 
 		%body
@@ -152,22 +186,42 @@
 							%a{href: "#"} Contact Us
 			%section.main
 				.main__jumbotron.image-wrapper
-					%img.jumbotron__image{alt: "Large image of our product", src:"./images/product.jumbotron.jpg"}
+					%img.jumbotron__image(alt="Large image of our product" src="./images/product.jumbotron.jpg")
 					.jumbotron__panel-wrapper
 						.jumbotron__panel
-							%h1.jumbotron__text [best soaps]
+							%h1.jumbotron__text [Just like nature intended]
 							%button.jumbotron__cta.btn.btn-primary [shop now]
+
+
 				%main__favorites
-					.container
-						.favorites__row
-							.centered_row
-								%h2.align-center Our Favorites		
-							%h3 [Probiotic 
-							%h3 Cleansing Bars]
-							%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
-							%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
-							.image-wrapper
+
+					.centered_row
+						%h2.mt-5 Our Favorites	
+
+					.container.mt-4
+						%h3 [Probiotic 
+						%h3.mb-2 Cleansing Bars]
+						%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
+						%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
+						.image-wrapper.product-images
+							.product__bkgd-wrapper__1.product__img-wrappers
+								%img(src="images/85274765-green-leaf-seamless-pattern-tropical-polygons-plant-in-low-poly-style-for-fresh-background-wallpaper.jpg")
+							.product__img-wrapper__1.product__img-wrappers.product__wrapper
 								%img(src="images/IMG-20190127-WA0012.jpg")
+
+					.separator.mt-4.mb-4
+						&nbsp;
+
+					.container.mt-4
+						%h3 [Nature's Essence 
+						%h3.mb-2 Lavendar Bars]
+						%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
+						%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
+						.image-wrapper.product-images
+							.product__bkgd-wrapper__2.product__img-wrappers
+								%img.product__bkgd__2(src="images/wood_bkgd.png")
+							.product__img-wrapper__2.product__img-wrappers.product__wrapper
+								%img.product__img__2(src="images/IMG-20190601-WA0049.jpg")
 			%footer
 				.footer__content-container.container
 					.row.col-sm-6
@@ -181,11 +235,11 @@
 	
 	Todo:
 
-
+	Move product around in second favorite
 	Jumbotron
-	Soap sections
-
-	Try partials
+	Style buttons
+	Footer
+	Accessibility
 	 
 
 	Asides
@@ -199,6 +253,8 @@
 	Figure something out w/ the jumbotron
 	Do the soap
 	Find wooden background, green plant illustrations
+
+	h1 color - #576855
 
 
 	__Fri 20 Mar__
