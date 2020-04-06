@@ -6,169 +6,7 @@
 		%meta(name="viewport" content="width=device-width, user-scalable=no")
 
 		%link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
-
-		%style{media: "screen"}
-			:plain
-
-				.header{
-					width: 100%;
-				}
-
-				.header__logo-wrapper{
-					width: 100%;
-					text-align: center;
-				}
-
-				.main__jumbotron{
-					width: 100vw;
-					height: 52vw;
-					max-height: 540px;
-					position: relative;
-					overflow: hidden;
-				}
-
-				.jumbotron__image{
-					width: 100%;
-					height: auto;
-					position: absolute;
-					z-index: -10;
-					filter: brightness(120%) opacity(70%);
-				}
-
-				.jumbotron__panel{
-					width: 200px; height: 200px;
-					text-align: center;
-				}
-
-				.jumbotron__panel-wrapper{
-					width: 100%;
-					height: 100%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-
-				.header__logo{
-					width: 15rem;
-					max-width: 300px;
-					height: auto;
-				}
-
-				.header__navigation{
-					width: 100%;
-				}
-
-				ul.navigation_list{
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-				}
-
-				.navigation_list li{
-					display: inline-block;
-					text-decoration: none;
-				}
-
-				.align-center{
-					margin: 0 auto;
-				}
-
-				@media only screen and (max-width: 400px){
-
-					html{
-						font-size: 13px;
-					}
-
-					.main__jumbotron{
-						height: 62vw;
-						max-height: none;
-					}
-
-					.jumbotron__text{
-						font-size: 1.5rem;
-						text-transform: uppercase;
-					}
-
-					.jumbotron__panel{
-						height: 6em;
-						display: flex;
-						flex-direction: column;
-						justify-content: space-between;
-						align-items: center;
-					}
-
-					.jumbotron__image{
-						height: 100%;
-						width: auto;
-						position: absolute;
-						z-index: -10;
-						left: -2rem;
-					}
-
-					.main__jumbotron{
-						height: 100vw;
-					}
-
-					.favorites__row{
-						padding-top: 4rem;
-					}
-
-					.favorites__row h2{
-						margin: 0 auto;
-					}
-
-					.image-wrapper{
-						width: 100%;
-						height: 86vw;
-						overflow: hidden;
-						position: relative;
-					}
-
-					.centered_row{
-						text-align: center;
-					}
-
-					.product-images img{
-						width: 100%;
-						height: auto;
-					}
-
-					.product__img-wrappers{
-						position: absolute;
-						overflow: hidden;
-					}
-
-					.product__bkgd-wrapper__1{
-						left: 0; bottom: 0;
-						width: 90%;
-						height: 68vw;
-					}
-
-					.product__img-wrapper__1{
-						right: 0; top: 0;
-					}
-
-					.product__bkgd-wrapper__2{
-						left: 0; bottom: 0;
-						width: 80%;
-						height: 100%;
-					}
-
-					.product__img-wrapper__2{
-						right: 0; top: 1rem;
-					}
-
-					.product__wrapper{
-						/* border: 3px solid gray; */
-						width: 90%;
-						height: 70vw;
-					}
-
-					.product__img__2{
-						height: 100%!important;
-						width: auto!important;
-					}
-				}
+		%link(rel="stylesheet" href="styles/main.css")
 
 		%body
 			%header.header
@@ -185,47 +23,66 @@
 						%li 
 							%a{href: "#"} Contact Us
 			%section.main
-				.main__jumbotron.image-wrapper
-					%img.jumbotron__image(alt="Large image of our product" src="./images/product.jumbotron.jpg")
+				.main__jumbotron.image-wrapper(style="overflow: visible; position: relative")
+					.image-wrapper(style="position: absolute; z-index: -500;")
+						%img.jumbotron__image(alt="Large image of our product" src="./images/product.jumbotron.jpg")
 					.jumbotron__panel-wrapper
 						.jumbotron__panel
 							%h1.jumbotron__text [Just like nature intended]
-							%button.jumbotron__cta.btn.btn-primary [shop now]
+						%button.jumbotron__cta.btn-main shop now
 
 
-				%main__favorites
-
+				.main__favorites
+					.separator
+						&nbsp;
 					.centered_row
-						%h2.mt-5 Our Favorites	
+						%h2.mt-5.mb-5.favorites__header Our Favorites	
 
 					.container.mt-4
-						%h3 [Probiotic 
-						%h3.mb-2 Cleansing Bars]
-						%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
-						%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
-						.image-wrapper.product-images
-							.product__bkgd-wrapper__1.product__img-wrappers
-								%img(src="images/85274765-green-leaf-seamless-pattern-tropical-polygons-plant-in-low-poly-style-for-fresh-background-wallpaper.jpg")
-							.product__img-wrapper__1.product__img-wrappers.product__wrapper
-								%img(src="images/IMG-20190127-WA0012.jpg")
+						.row.special_row
+							.col-sm-6.favorites_column
+								.h-100.mr-5.favorites__text__1
+									%h3 [Probiotic 
+									%h3.mb-2 Cleansing Bars]
+									%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
+									%button.btn-main.mb-5.mt-2 Shop Soaps
+							.col-sm-6.favorites_column.float-right
+								.image-wrapper.product-images
+									.product__bkgd-wrapper__1.product__img-wrappers
+										%img(src="images/85274765-green-leaf-seamless-pattern-tropical-polygons-plant-in-low-poly-style-for-fresh-background-wallpaper.jpg")
+									.product__img-wrapper__1.product__img-wrappers.product__wrapper
+										%img(src="images/IMG-20190127-WA0012.jpg")
 
 					.separator.mt-4.mb-4
 						&nbsp;
 
 					.container.mt-4
-						%h3 [Nature's Essence 
-						%h3.mb-2 Lavendar Bars]
-						%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
-						%button.btn.btn-primary.mb-5.mt-2 Shop Soaps
-						.image-wrapper.product-images
-							.product__bkgd-wrapper__2.product__img-wrappers
-								%img.product__bkgd__2(src="images/wood_bkgd.png")
-							.product__img-wrapper__2.product__img-wrappers.product__wrapper
-								%img.product__img__2(src="images/IMG-20190601-WA0049.jpg")
+						.row.special_row
+							.col-sm-6.favorites_column.float-right
+								.h-100.ml-5.favorites__text__2
+									%h3 [Nature's Essence 
+									%h3.mb-2 Lavendar Bars]
+									%p [I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]
+									%button.btn-main.mb-5.mt-2 Shop Soaps
+							.col-sm-6.favorites_column
+								.image-wrapper.product-images
+									.product__bkgd-wrapper__2.product__img-wrappers
+										%img.product__bkgd__2(src="images/wood_bkgd.png")
+									.product__img-wrapper__2.product__img-wrappers.product__wrapper
+										%img.product__img__2(src="images/IMG-20190601-WA0049.jpg")
+
+
 			%footer
-				.footer__content-container.container
-					.row.col-sm-6
-					.row.col-sm-6
+				%hr.footer__separator.mb-3.mt-4
+				.container
+					.row
+						.col-sm-12
+							%h2 Contact
+							%ul
+								%li [123-456-7890]
+								%li [info@mydomain.com]
+						.copyright.centered_row.mt-3
+							%p© 2020 by Shea & Cocoa. Proudly created by Ganziano
 			:plain
 				<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 

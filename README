@@ -6,14 +6,26 @@ others
 
 + put this on Github
 * Style header & section 1
+	- links must be black
+	- try find a serif font that is harmonious for header or paragraph
 + Look at Gatbsy businesses, Gatsby itself
 * Use Cloudinary to store all images
 -
-* Jumbotron
-* Soap sections
-* Footer
++ Jumbotron
+	+ wrap image twice
++ Soap sections
++ Footer
+	+ just contact us
++ Different mobile sizes
 * Desktop
+	+ jumbotron
+	* our favorites
+		- columns
+		- floating
+		- backgrounds
+* Tablet
 * Final pass
+* Share w/ Omar
 
 
 ./convert.sh
@@ -38,10 +50,42 @@ Making it down each bullet point is like swimming against a current that's tryin
 
 ---- Scratchpad ----
 
+-- Thu 2 Apr --
+
+(9:57 AM)
+
+Done 
+* our favorites
+	+ columns
+	+ floating
+
+Undone
+* our favorites
+	- backgrounds
+	- polish
+
+-- Wed 1 Apr --
+
+(9:12 AM)
+
+Done
+* Mobile view
+
+Undone
+* our favorites
+	- columns
+	- floating
+	- backgrounds
+
+
+
+
 -- Mon 30 Mar --
 
-* The buttons
-* The footer
++ The buttons
++ The footer
+* the jumbotron image needs fixing
+* check for all mobile views
 * The right classnames for responsive
 * The fonts
 

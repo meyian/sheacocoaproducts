@@ -4,167 +4,7 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, user-scalable=no' name='viewport'>
 <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
-<style media='screen'>
-.header{
-	width: 100%;
-}
-
-.header__logo-wrapper{
-	width: 100%;
-	text-align: center;
-}
-
-.main__jumbotron{
-	width: 100vw;
-	height: 52vw;
-	max-height: 540px;
-	position: relative;
-	overflow: hidden;
-}
-
-.jumbotron__image{
-	width: 100%;
-	height: auto;
-	position: absolute;
-	z-index: -10;
-	filter: brightness(120%) opacity(70%);
-}
-
-.jumbotron__panel{
-	width: 200px; height: 200px;
-	text-align: center;
-}
-
-.jumbotron__panel-wrapper{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.header__logo{
-	width: 15rem;
-	max-width: 300px;
-	height: auto;
-}
-
-.header__navigation{
-	width: 100%;
-}
-
-ul.navigation_list{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.navigation_list li{
-	display: inline-block;
-	text-decoration: none;
-}
-
-.align-center{
-	margin: 0 auto;
-}
-
-@media only screen and (max-width: 400px){
-
-	html{
-		font-size: 13px;
-	}
-
-	.main__jumbotron{
-		height: 62vw;
-		max-height: none;
-	}
-
-	.jumbotron__text{
-		font-size: 1.5rem;
-		text-transform: uppercase;
-	}
-
-	.jumbotron__panel{
-		height: 6em;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.jumbotron__image{
-		height: 100%;
-		width: auto;
-		position: absolute;
-		z-index: -10;
-		left: -2rem;
-	}
-
-	.main__jumbotron{
-		height: 100vw;
-	}
-
-	.favorites__row{
-		padding-top: 4rem;
-	}
-
-	.favorites__row h2{
-		margin: 0 auto;
-	}
-
-	.image-wrapper{
-		width: 100%;
-		height: 86vw;
-		overflow: hidden;
-		position: relative;
-	}
-
-	.centered_row{
-		text-align: center;
-	}
-
-	.product-images img{
-		width: 100%;
-		height: auto;
-	}
-
-	.product__img-wrappers{
-		position: absolute;
-		overflow: hidden;
-	}
-
-	.product__bkgd-wrapper__1{
-		left: 0; bottom: 0;
-		width: 90%;
-		height: 68vw;
-	}
-
-	.product__img-wrapper__1{
-		right: 0; top: 0;
-	}
-
-	.product__bkgd-wrapper__2{
-		left: 0; bottom: 0;
-		width: 80%;
-		height: 100%;
-	}
-
-	.product__img-wrapper__2{
-		right: 0; top: 1rem;
-	}
-
-	.product__wrapper{
-		/* border: 3px solid gray; */
-		width: 90%;
-		height: 70vw;
-	}
-
-	.product__img__2{
-		height: 100%!important;
-		width: auto!important;
-	}
-}
-</style>
+<link href='styles/main.css' rel='stylesheet'>
 <body>
 <header class='header'>
 <div class='header__logo-wrapper'>
@@ -188,24 +28,35 @@ ul.navigation_list{
 </nav>
 </header>
 <section class='main'>
-<div class='main__jumbotron image-wrapper'>
+<div class='main__jumbotron image-wrapper' style='overflow: visible; position: relative'>
+<div class='image-wrapper' style='position: absolute; z-index: -500;'>
 <img alt='Large image of our product' class='jumbotron__image' src='./images/product.jumbotron.jpg'>
+</div>
 <div class='jumbotron__panel-wrapper'>
 <div class='jumbotron__panel'>
 <h1 class='jumbotron__text'>[Just like nature intended]</h1>
-<button class='jumbotron__cta btn btn-primary'>[shop now]</button>
+</div>
+<button class='jumbotron__cta btn-main'>shop now</button>
 </div>
 </div>
+<div class='main__favorites'>
+<div class='separator'>
+&nbsp;
 </div>
-<main__favorites>
 <div class='centered_row'>
-<h2 class='mt-5'>Our Favorites</h2>
+<h2 class='mt-5 mb-5 favorites__header'>Our Favorites</h2>
 </div>
 <div class='container mt-4'>
+<div class='row special_row'>
+<div class='col-sm-6 favorites_column'>
+<div class='h-100 mr-5 favorites__text__1'>
 <h3>[Probiotic</h3>
 <h3 class='mb-2'>Cleansing Bars]</h3>
 <p>[I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]</p>
-<button class='btn btn-primary mb-5 mt-2'>Shop Soaps</button>
+<button class='btn-main mb-5 mt-2'>Shop Soaps</button>
+</div>
+</div>
+<div class='col-sm-6 favorites_column float-right'>
 <div class='image-wrapper product-images'>
 <div class='product__bkgd-wrapper__1 product__img-wrappers'>
 <img src='images/85274765-green-leaf-seamless-pattern-tropical-polygons-plant-in-low-poly-style-for-fresh-background-wallpaper.jpg'>
@@ -215,14 +66,22 @@ ul.navigation_list{
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class='separator mt-4 mb-4'>
 &nbsp;
 </div>
 <div class='container mt-4'>
+<div class='row special_row'>
+<div class='col-sm-6 favorites_column float-right'>
+<div class='h-100 ml-5 favorites__text__2'>
 <h3>[Nature's Essence</h3>
 <h3 class='mb-2'>Lavendar Bars]</h3>
 <p>[I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.]</p>
-<button class='btn btn-primary mb-5 mt-2'>Shop Soaps</button>
+<button class='btn-main mb-5 mt-2'>Shop Soaps</button>
+</div>
+</div>
+<div class='col-sm-6 favorites_column'>
 <div class='image-wrapper product-images'>
 <div class='product__bkgd-wrapper__2 product__img-wrappers'>
 <img class='product__bkgd__2' src='images/wood_bkgd.png'>
@@ -232,12 +91,25 @@ ul.navigation_list{
 </div>
 </div>
 </div>
-</main__favorites>
+</div>
+</div>
+</div>
 </section>
 <footer>
-<div class='footer__content-container container'>
-<div class='row col-sm-6'></div>
-<div class='row col-sm-6'></div>
+<hr class='footer__separator mb-3 mt-4'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-12'>
+<h2>Contact</h2>
+<ul>
+<li>[123-456-7890]</li>
+<li>[info@mydomain.com]</li>
+</ul>
+</div>
+<div class='copyright centered_row mt-3'>
+<p>© 2020 by Shea & Cocoa. Proudly created by Ganziano</p>
+</div>
+</div>
 </div>
 </footer>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
