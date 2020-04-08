@@ -33,8 +33,6 @@
 
 
 				.main__favorites
-					.separator
-						&nbsp;
 					.centered_row
 						%h2.mt-5.mb-5.favorites__header Our Favorites	
 
@@ -56,7 +54,7 @@
 					.separator.mt-4.mb-4
 						&nbsp;
 
-					.container.mt-4
+					.container.mt-4.favorites__last
 						.row.special_row
 							.col-sm-6.favorites_column.float-right
 								.h-100.ml-5.favorites__text__2
@@ -71,9 +69,14 @@
 									.product__img-wrapper__2.product__img-wrappers.product__wrapper
 										%img.product__img__2(src="images/IMG-20190601-WA0049.jpg")
 
+					.separator.mb-4.main__separator
+						&nbsp;
+
+
+
 
 			%footer
-				%hr.footer__separator.mb-3.mt-4
+				%hr.footer__separator.mb-5.mt-4
 				.container
 					.row
 						.col-sm-12

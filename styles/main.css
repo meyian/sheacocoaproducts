@@ -3,6 +3,10 @@
 	height: 400px;
 }
 
+.container{
+	max-width: 800px!important;
+}
+
 .special_row{
 	display: block;
 	height: 400px;
@@ -212,6 +216,14 @@ footer .col-sm-12{
 
 	.main{
 		display: inline-block;
+	}
+
+	.favorites__last{
+		display: inline-block;
+	}
+
+	.main__separator{
+		display: none;
 	}
 
 	.favorites__text__1{
